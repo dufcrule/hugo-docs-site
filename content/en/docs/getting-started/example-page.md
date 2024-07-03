@@ -7,7 +7,7 @@ categories: [Examples]
 tags: [test, sample, docs]
 ---
 
-Some knowledge of {{< glossary-tooltip "tcp" >}} is useful to anyone who works with networks.
+Find out how to use our {{< glossary-tooltip "api" >}} in this section of the documentation.
 
 {{% pageinfo %}}
 This is a placeholder page. Replace it with your own content.
