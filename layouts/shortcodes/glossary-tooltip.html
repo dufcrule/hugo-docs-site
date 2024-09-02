@@ -6,11 +6,11 @@
     <!-- Find matches -->
     {{- if eq ( .abbr | lower) ( $entry | lower ) -}}
         <a href="/docs/reference/glossary/#{{ .term | urlize }}">
-            <abbr title="{{ .term }}">{{ .abbr }}</abbr>
+            <abbr title="{{ .term | plainify }}">{{ .abbr }}</abbr>
         </a>
     {{- else if eq ( .term | lower) ( $entry | lower ) -}}
         <a href="/docs/reference/glossary/#{{ .term | urlize }}">
-            <abbr title="{{ .term }}">{{ $entry }}</abbr>
+            <abbr title="{{ .term | plainify }}">{{ $entry }}</abbr>
         </a>
     {{- end -}}
 {{- end -}}
