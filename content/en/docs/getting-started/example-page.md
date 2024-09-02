@@ -9,6 +9,10 @@ tags: [test, sample, docs]
 
 Find out how to use our {{< glossary-tooltip "api" >}} in this section of the documentation.
 
+If it's broken, you can figure out how to fix it by using the {{< glossary-tooltip "mttr" >}} formula.
+This is calculated by dividing the total unplanned maintenance time spent on an asset by the total number of failures that asset experienced over a specific period.
+Mean time to repair is most commonly represented in hours.
+
 {{% pageinfo %}}
 This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
