@@ -1,13 +1,16 @@
-<!--- variables based on shortcode argument -->
 {{- $entry := (.Get 0) -}}
 
 <!-- range over data file -->
 {{- range $.Site.Data.termbase -}}
 
-<!-- Find matches -->
+    <!-- Find matches -->
     {{- if eq ( .abbr | lower) ( $entry | lower ) -}}
-        <abbr title="{{- .term -}}. {{ .definition | plainify -}}"> {{- .abbr -}}</abbr>
+        <a href="/docs/reference/glossary/#{{ .term | urlize }}">
+            <abbr title="{{ .term }}. {{ .definition | plainify }}">{{ .abbr }}</abbr>
+        </a>
     {{- else if eq ( .term | lower) ( $entry | lower ) -}}
-        <abbr title="{{ .definition | plainify -}}"> {{- $entry -}}</abbr>
+        <a href="/docs/reference/glossary/#{{ .term | urlize }}">
+            <abbr title="{{ .definition | plainify }}">{{ $entry }}</abbr>
+        </a>
     {{- end -}}
 {{- end -}}
